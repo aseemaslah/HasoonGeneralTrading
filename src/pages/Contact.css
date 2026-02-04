@@ -1,0 +1,130 @@
+.contact-page {
+    /* padding-top: 80px; handled by section padding mostly */
+}
+
+.contact-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    /* Reduced from 4rem for mobile */
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.contact-desc {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 2.5rem;
+}
+
+.info-items {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info-item {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+}
+
+.icon-box {
+    width: 50px;
+    height: 50px;
+    border-radius: 1rem;
+    background: white;
+    color: var(--accent-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+
+.info-item h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: var(--primary);
+}
+
+.info-item p {
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+.contact-form-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f3f4f6;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.2s;
+    background: var(--bg-light);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(10, 35, 81, 0.05);
+}
+
+.submit-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 900px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .contact-info {
+        order: 2;
+        /* Put form first on mobile? Usually better to keep info first if it's short, or form first if CTA */
+        order: 0;
+        /* Let's keep normal order */
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-form-card {
+        padding: 1.5rem;
+    }
+
+    .contact-title {
+        margin-bottom: 2rem;
+    }
+}

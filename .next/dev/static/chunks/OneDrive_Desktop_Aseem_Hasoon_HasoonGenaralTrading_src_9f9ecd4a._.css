@@ -1,0 +1,1006 @@
+/* [project]/OneDrive/Desktop/Aseem/Hasoon/HasoonGenaralTrading/src/app/globals.css [app-client] (css) */
+:root {
+  --primary: #0a2351;
+  --primary-light: #163a7a;
+  --accent: #fbbf24;
+  --accent-dark: #d97706;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --white: #fff;
+  --bg-light: #f3f4f6;
+  --bg-dark: #111827;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  -webkit-font-smoothing: antialiased;
+  font-family: Outfit, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border: 2px solid var(--bg-light);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-light);
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 6rem 0;
+}
+
+.btn {
+  touch-action: manipulation;
+  white-space: nowrap;
+  border-radius: 9999px;
+  justify-content: center;
+  align-items: center;
+  min-height: 48px;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all .3s cubic-bezier(.4, 0, .2, 1);
+  display: inline-flex;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+  box-shadow: 0 4px 6px -1px #0a23511a, 0 2px 4px -1px #0a23510f;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px #0a235133, 0 4px 6px -2px #0a23511a;
+}
+
+.btn-accent {
+  background-color: var(--accent);
+  color: var(--primary);
+}
+
+.btn-accent:hover {
+  background-color: var(--accent-dark);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px #fbbf244d;
+}
+
+.heading-xl {
+  letter-spacing: -.02em;
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.heading-lg {
+  letter-spacing: -.01em;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.section-scroll {
+  scroll-margin-top: 80px;
+}
+
+@media (max-width: 1024px) {
+  .heading-xl {
+    font-size: 3rem;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  .section {
+    padding: 2.5rem 0;
+  }
+
+  .heading-xl {
+    font-size: 2.5rem;
+  }
+
+  .heading-lg {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 0 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading-xl {
+    font-size: 2rem;
+  }
+
+  .heading-lg {
+    font-size: 1.6rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .section {
+    padding: 2rem 0;
+  }
+
+  .btn {
+    width: 100%;
+    padding: .75rem 1.5rem;
+  }
+}
+
+/* [project]/OneDrive/Desktop/Aseem/Hasoon/HasoonGenaralTrading/src/components/Navbar.css [app-client] (css) */
+.navbar {
+  z-index: 1000;
+  padding: 1rem 0;
+  padding-top: max(1rem, env(safe-area-inset-top));
+  background: var(--white);
+  border-bottom: 1px solid #0000000d;
+  transition: all .4s cubic-bezier(.4, 0, .2, 1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 4px 6px -1px #0000000d;
+}
+
+.navbar.scrolled {
+  padding: .75rem 0;
+  box-shadow: 0 10px 30px -10px #0000001a;
+}
+
+.nav-container {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.logo-text {
+  letter-spacing: 1px;
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.nav-links {
+  align-items: center;
+  gap: 1rem;
+  padding: .5rem;
+  display: flex;
+}
+
+.navbar.scrolled .nav-links {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.nav-link-btn {
+  color: var(--text-dark);
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: 999px;
+  padding: .75rem 1.5rem;
+  font-family: inherit;
+  font-size: .95rem;
+  font-weight: 600;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link-btn:hover {
+  color: var(--primary);
+  background: #0a23510d;
+}
+
+.desktop-only .btn-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  border: 1px solid #fff3;
+  box-shadow: 0 4px 15px #fbbf244d;
+}
+
+.desktop-only .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px #fbbf2466;
+}
+
+.mobile-toggle {
+  color: var(--primary);
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: .5rem;
+  padding: .5rem;
+  transition: background .2s;
+  display: none;
+}
+
+.mobile-toggle:hover {
+  background: #0000000d;
+}
+
+.mobile-menu {
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  padding: 1.5rem 1rem;
+  padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
+  background: #fffffffa;
+  border-bottom: 1px solid #0000000d;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  box-shadow: 0 15px 30px -5px #0000001a;
+}
+
+.mobile-nav-links {
+  text-align: center;
+  flex-direction: column;
+  gap: .75rem;
+  display: flex;
+}
+
+@media (max-width: 480px) {
+  .mobile-nav-links {
+    gap: .5rem;
+  }
+
+  .mobile-nav-links button {
+    padding: .75rem;
+    font-size: 1rem;
+  }
+}
+
+.mobile-nav-links button {
+  color: var(--text-dark);
+  cursor: pointer;
+  background: none;
+  border: 1px solid #0000;
+  border-radius: .75rem;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all .2s cubic-bezier(.4, 0, .2, 1);
+}
+
+.mobile-nav-links button:hover, .mobile-nav-links button:active {
+  background: var(--bg-light);
+  color: var(--primary);
+  border-color: #0000000d;
+  transform: scale(.98);
+}
+
+.desktop-only {
+  display: flex;
+}
+
+@media (max-width: 900px) {
+  .nav-links.desktop-only, .desktop-only {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+}
+
+/* [project]/OneDrive/Desktop/Aseem/Hasoon/HasoonGenaralTrading/src/components/Footer.css [app-client] (css) */
+.footer {
+  background: linear-gradient(180deg, var(--primary) 0%, #05132e 100%);
+  color: var(--white);
+  padding-top: 6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer:before {
+  content: "";
+  background: linear-gradient(90deg, var(--accent) 0%, #fcd34d 50%, var(--accent) 100%);
+  height: 6px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer-grid {
+  z-index: 1;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 4rem;
+  padding-bottom: 4rem;
+  display: grid;
+  position: relative;
+}
+
+.footer-logo {
+  background: #fffffff2;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  display: inline-block;
+}
+
+.footer-logo img {
+  display: block;
+}
+
+.footer-desc {
+  color: #d1d5db;
+  max-width: 320px;
+  margin-bottom: 2.5rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.social-links {
+  gap: 1.25rem;
+  display: flex;
+}
+
+.social-link {
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  color: #fff;
+  background: #ffffff0d;
+  border: 1px solid #ffffff1a;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  transition: all .4s cubic-bezier(.175, .885, .32, 1.275);
+  display: flex;
+}
+
+.social-link:hover {
+  background: var(--accent);
+  color: var(--primary);
+  border-color: var(--accent);
+  transform: translateY(-5px)scale(1.1);
+  box-shadow: 0 10px 20px #0003;
+}
+
+.footer-col h3 {
+  color: var(--white);
+  letter-spacing: -.5px;
+  margin-bottom: 2rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.footer-col h3 span {
+  color: var(--accent);
+}
+
+.footer-links {
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+  display: flex;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  align-items: center;
+  gap: .75rem;
+  font-weight: 500;
+  transition: all .3s;
+  display: inline-flex;
+}
+
+.footer-links a:before {
+  content: "→";
+  color: var(--accent);
+  opacity: 0;
+  transition: all .3s;
+  transform: translateX(-10px);
+}
+
+.footer-links a:hover {
+  color: var(--white);
+  padding-left: .5rem;
+}
+
+.footer-links a:hover:before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.contact-list {
+  flex-direction: column;
+  gap: 1.5rem;
+  list-style: none;
+  display: flex;
+}
+
+.contact-list li {
+  color: #d1d5db;
+  align-items: flex-start;
+  gap: 1.25rem;
+  display: flex;
+}
+
+.contact-icon-box {
+  color: var(--accent);
+  background: #fbbf241a;
+  border-radius: .75rem;
+  justify-content: center;
+  align-items: center;
+  padding: .75rem;
+  display: flex;
+}
+
+.contact-text label {
+  text-transform: uppercase;
+  color: #6b7280;
+  letter-spacing: .5px;
+  margin-bottom: .25rem;
+  font-size: .75rem;
+  font-weight: 700;
+  display: block;
+}
+
+.contact-text p {
+  color: var(--white);
+  font-weight: 500;
+}
+
+.footer-bottom {
+  text-align: center;
+  color: #6b7280;
+  background: #0000004d;
+  border-top: 1px solid #ffffff0d;
+  padding: 2rem 0;
+  font-size: .9rem;
+}
+
+/* [project]/OneDrive/Desktop/Aseem/Hasoon/HasoonGenaralTrading/src/pages/Home.css [app-client] (css) */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.hero-graphic-anim {
+  animation: 6s ease-in-out infinite float, 8s ease-in-out infinite breathe;
+}
+
+.hero {
+  align-items: center;
+  min-height: 100dvh;
+  padding-top: 80px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg {
+  z-index: -1;
+  background: radial-gradient(circle at 70% 30%, #0a23510d 0%, #fff0 60%);
+  position: absolute;
+  inset: 0;
+}
+
+.hero-content {
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  display: grid;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-badge {
+  color: var(--accent-dark);
+  background: #fbbf241a;
+  border-radius: 999px;
+  margin-bottom: 1.5rem;
+  padding: .5rem 1rem;
+  font-size: .875rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.hero-sub {
+  color: var(--text-light);
+  margin: 1.5rem 0 2.5rem;
+  font-size: 1.125rem;
+}
+
+.hero-btns {
+  gap: 1rem;
+  display: flex;
+}
+
+.btn-glass {
+  color: var(--text-dark);
+  background: #fffc;
+  border: 1px solid #e5e7eb;
+}
+
+.btn-glass:hover {
+  background: var(--bg-light);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.hero-graphic {
+  aspect-ratio: 1;
+  background: url("https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80") center / cover no-repeat;
+  border-radius: 2rem;
+  width: 100%;
+  position: relative;
+  box-shadow: 20px 20px 60px #0000001a;
+}
+
+.globe-graphic {
+  background: var(--accent);
+  z-index: -1;
+  opacity: .2;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+}
+
+.features-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  display: grid;
+}
+
+.feature-card {
+  background: #fff;
+  border: 1px solid #f3f4f6;
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all .3s;
+  box-shadow: 0 4px 6px -1px #0000000d;
+}
+
+.feature-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 20px 25px -5px #0000001a;
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  color: var(--primary);
+  background: #0a23510d;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  display: flex;
+}
+
+.split-layout {
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  display: grid;
+}
+
+.rounded-img {
+  border-radius: 1rem;
+  width: 100%;
+  box-shadow: 0 20px 25px -5px #0000001a;
+}
+
+.check-list {
+  margin: 2rem 0;
+  list-style: none;
+}
+
+.check-list li {
+  align-items: center;
+  gap: .75rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  display: flex;
+}
+
+.check-icon {
+  color: var(--accent-dark);
+}
+
+.cta-section {
+  background: var(--primary);
+  color: #fff;
+  padding: 5rem 0;
+}
+
+@media (max-width: 1024px) {
+  .hero-content, .split-layout {
+    gap: 2rem;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 100px;
+    padding-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content, .split-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-text {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .hero-sub {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero-btns .btn {
+    width: 100%;
+  }
+
+  .hero {
+    padding-top: 80px;
+    padding-bottom: 1rem;
+  }
+
+  .hero-content {
+    gap: 1.5rem;
+  }
+
+  .hero-badge {
+    margin-bottom: 1rem;
+    padding: .35rem .75rem;
+    font-size: .75rem;
+  }
+
+  .hero-sub {
+    margin: 1rem 0 1.5rem;
+    font-size: .95rem;
+    line-height: 1.5;
+  }
+
+  .hero-graphic {
+    aspect-ratio: 2;
+    border-radius: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+/* [project]/OneDrive/Desktop/Aseem/Hasoon/HasoonGenaralTrading/src/pages/About.css [app-client] (css) */
+.about-page {
+  padding-top: 80px;
+}
+
+.about-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about-grid {
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 3rem;
+  display: grid;
+}
+
+@media (min-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.about-text p {
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.vision-card {
+  background-color: var(--bg-light);
+  border-left: 5px solid var(--accent);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+}
+
+.vision-card h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.vision-card p {
+  color: var(--text-dark);
+  font-size: 1.125rem;
+}
+
+/* [project]/OneDrive/Desktop/Aseem/Hasoon/HasoonGenaralTrading/src/pages/Services.css [app-client] (css) */
+.services-page {
+  padding-top: 80px;
+}
+
+.bg-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.services-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  display: grid;
+}
+
+@media (max-width: 640px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.product-card {
+  background: #fff;
+  border: 1px solid #f3f4f6;
+  border-radius: 1rem;
+  transition: all .3s;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px #0000001a;
+}
+
+.product-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px #00000026;
+}
+
+.card-image-wrap {
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-image-wrap img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform .5s;
+}
+
+.product-card:hover .card-image-wrap img {
+  transform: scale(1.1);
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-content h3 {
+  color: var(--primary);
+  margin-bottom: .5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.card-content p {
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+/* [project]/OneDrive/Desktop/Aseem/Hasoon/HasoonGenaralTrading/src/pages/Contact.css [app-client] (css) */
+.contact-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact-layout {
+  grid-template-columns: 1fr 1.5fr;
+  align-items: start;
+  gap: 4rem;
+  display: grid;
+}
+
+.contact-desc {
+  color: var(--text-light);
+  margin-bottom: 2.5rem;
+  font-size: 1.1rem;
+}
+
+.info-items {
+  flex-direction: column;
+  gap: 2rem;
+  display: flex;
+}
+
+.info-item {
+  align-items: flex-start;
+  gap: 1.25rem;
+  display: flex;
+}
+
+.icon-box {
+  width: 50px;
+  height: 50px;
+  color: var(--accent-dark);
+  background: #fff;
+  border-radius: 1rem;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  box-shadow: 0 4px 6px -1px #0000000d;
+}
+
+.info-item h3 {
+  color: var(--primary);
+  margin-bottom: .25rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.info-item p {
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+.contact-form-card {
+  background: #fff;
+  border: 1px solid #f3f4f6;
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  box-shadow: 0 20px 40px -5px #0000000d;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  color: var(--text-dark);
+  margin-bottom: .5rem;
+  font-weight: 500;
+  display: block;
+}
+
+.form-group input, .form-group textarea {
+  background: var(--bg-light);
+  border: 1px solid #e5e7eb;
+  border-radius: .75rem;
+  width: 100%;
+  padding: .875rem 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all .2s;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  border-color: var(--primary);
+  background: #fff;
+  outline: none;
+  box-shadow: 0 0 0 4px #0a23510d;
+}
+
+.submit-btn {
+  justify-content: center;
+  gap: .5rem;
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+}
+
+@media (max-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .contact-info {
+    order: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-form-card {
+    padding: 1.5rem;
+  }
+
+  .contact-title {
+    margin-bottom: 2rem;
+  }
+}
+
+/*# sourceMappingURL=OneDrive_Desktop_Aseem_Hasoon_HasoonGenaralTrading_src_9f9ecd4a._.css.map*/

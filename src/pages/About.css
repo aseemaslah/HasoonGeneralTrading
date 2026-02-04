@@ -1,0 +1,47 @@
+.about-page {
+    padding-top: 80px;
+}
+
+.about-title {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.about-text p {
+    font-size: 1.125rem;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.vision-card {
+    background-color: var(--bg-light);
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    border-left: 5px solid var(--accent);
+}
+
+.vision-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.vision-card p {
+    color: var(--text-dark);
+    font-size: 1.125rem;
+}

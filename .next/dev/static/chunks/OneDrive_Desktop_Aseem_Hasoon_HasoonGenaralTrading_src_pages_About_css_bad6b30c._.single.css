@@ -1,0 +1,50 @@
+/* [project]/OneDrive/Desktop/Aseem/Hasoon/HasoonGenaralTrading/src/pages/About.css [app-client] (css) */
+.about-page {
+  padding-top: 80px;
+}
+
+.about-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about-grid {
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 3rem;
+  display: grid;
+}
+
+@media (min-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.about-text p {
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.vision-card {
+  background-color: var(--bg-light);
+  border-left: 5px solid var(--accent);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+}
+
+.vision-card h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.vision-card p {
+  color: var(--text-dark);
+  font-size: 1.125rem;
+}
+
+/*# sourceMappingURL=OneDrive_Desktop_Aseem_Hasoon_HasoonGenaralTrading_src_pages_About_css_bad6b30c._.single.css.map*/
