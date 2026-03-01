@@ -26,7 +26,9 @@ const Services = () => {
                 <FloatingAsset3D type="container" color="#163a7a" scale={0.8} />
             </div>
             <div className="container section">
-                <h2 className="heading-xl section-title">Products & Services</h2>
+                <div className="text-center">
+                    <h2 className="heading-xl section-title">Products & Services</h2>
+                </div>
                 <div className="services-grid">
                     {products.map((p, i) => (
                         <motion.div

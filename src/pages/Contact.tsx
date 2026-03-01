@@ -16,14 +16,16 @@ const Contact = () => {
     return (
         <div className="contact-page">
             <div className="container section">
-                <motion.h2
-                    initial={{ opacity: 0, y: -20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="heading-xl section-title"
-                >
-                    Contact Us
-                </motion.h2>
+                <div className="text-center">
+                    <motion.h2
+                        initial={{ opacity: 0, y: -20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="heading-xl section-title"
+                    >
+                        Contact Us
+                    </motion.h2>
+                </div>
                 <div className="contact-layout">
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}

@@ -28,7 +28,9 @@ const About = () => {
                 whileInView="visible"
                 viewport={{ once: true, margin: "-100px" }}
             >
-                <motion.h2 variants={itemVariants} className="heading-lg section-title">About Hasoon General Trading</motion.h2>
+                <div className="text-center">
+                    <motion.h2 variants={itemVariants} className="heading-lg section-title">About Hasoon General Trading</motion.h2>
+                </div>
                 <div className="about-grid">
                     <motion.div
                         variants={itemVariants}
