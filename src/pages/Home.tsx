@@ -56,7 +56,14 @@ const Home = () => {
             <section className="section features">
                 <div className="container">
                     <Reveal width="100%">
-                        <h2 className="sr-only">Our Core Features</h2>
+                        <div className="text-center mb-6">
+                            <span style={{ color: '#2563eb', fontWeight: 600, fontSize: '1.1rem', marginBottom: '0.75rem', display: 'block' }}>
+                                Our Features
+                            </span>
+                            <h2 className="heading-xl" style={{ color: '#111827', fontWeight: 800, lineHeight: '1.1', maxWidth: '800px', margin: '0 auto 2rem auto' }}>
+                                Your Gateway to International <br /> Trade
+                            </h2>
+                        </div>
                         <div className="features-grid">
                             <FeatureCard
                                 icon={<Globe size={32} />}

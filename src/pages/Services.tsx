@@ -7,7 +7,8 @@ import Image from 'next/image';
 
 const products = [
     { title: "Building Materials", desc: "High quality cement, steel, and construction tools.", img: "https://images.unsplash.com/photo-1535732759880-bbd5c7265e3f?auto=format&fit=crop&q=80&w=800" },
-    { title: "Chemical & Fertilizer", desc: "Specializing in high-purity LABSA 96 and high-grade industrial fertilizers.", img: "https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&q=80&w=800" },
+    { title: "Petroleum Products", desc: "Reliable supply of fuel, lubricants, and refined petroleum derivatives.", img: "/petroleum-products.png" },
+    { title: "Chemical & Insecticide", desc: "High-grade industrial chemicals and insecticides including Aluminum Phosphide, and Indoxacarb.", img: "https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&q=80&w=800" },
     { title: "Animal Health", desc: "Medicines, vitamins, and supplements for livestock.", img: "https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?auto=format&fit=crop&q=80&w=800" },
     { title: "Safety Equipment", desc: "Helmets, vests, and industrial safety gear.", img: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&q=80&w=800" },
     { title: "Spices & Food", desc: "Premium cardamom, rice, vegetables, and high-quality food products.", img: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&q=80&w=800" },

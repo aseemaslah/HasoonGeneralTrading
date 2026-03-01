@@ -161,6 +161,27 @@ button {
   border-radius: 2px;
 }
 
+.text-center .section-title::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-4 {
+  margin-bottom: 2rem;
+}
+
+.mb-5 {
+  margin-bottom: 3rem;
+}
+
+.mb-6 {
+  margin-bottom: 4rem;
+}
+
 .section-scroll {
   scroll-margin-top: 80px;
 }
@@ -200,8 +221,8 @@ button {
 
 @media (max-width: 480px) {
   .heading-xl {
-    font-size: 1.85rem;
-    line-height: 1.2;
+    font-size: 2.2rem;
+    line-height: 1.1;
   }
 
   .heading-lg {
