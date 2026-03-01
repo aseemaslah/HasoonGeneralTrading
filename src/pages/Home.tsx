@@ -4,6 +4,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Globe, ShieldCheck, Users } from 'lucide-react';
 import { Reveal } from '../components/Reveal';
+import HeroGlobe from '../components/HeroGlobe';
+import Image from 'next/image';
+import { Marquee } from '../components/Marquee';
 
 const Home = () => {
     return (
@@ -39,18 +42,21 @@ const Home = () => {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="hero-image-container"
                     >
-                        {/* Animated Hero Graphic */}
-                        <div className="hero-graphic hero-graphic-anim">
-                            <div className="globe-graphic"></div>
+                        {/* 3D Hero Globe */}
+                        <div className="hero-graphic-3d">
+                            <HeroGlobe />
                         </div>
                     </motion.div>
                 </div>
             </section>
 
+            <Marquee />
+
             {/* Features Section */}
             <section className="section features">
                 <div className="container">
                     <Reveal width="100%">
+                        <h2 className="sr-only">Our Core Features</h2>
                         <div className="features-grid">
                             <FeatureCard
                                 icon={<Globe size={32} />}
@@ -77,10 +83,13 @@ const Home = () => {
                 <div className="container split-layout">
                     <div className="image-side">
                         <Reveal>
-                            <img
+                            <Image
                                 src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
                                 alt="Corporate building"
                                 className="rounded-img"
+                                width={600}
+                                height={400}
+                                loading="lazy"
                             />
                         </Reveal>
                     </div>

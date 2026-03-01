@@ -16,11 +16,18 @@ const Contact = () => {
     return (
         <div className="contact-page">
             <div className="container section">
-                <h2 className="heading-xl contact-title">Contact Us</h2>
+                <motion.h2
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="heading-xl section-title"
+                >
+                    Contact Us
+                </motion.h2>
                 <div className="contact-layout">
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
                         className="contact-info"
@@ -56,16 +63,18 @@ const Contact = () => {
                     </motion.div>
 
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
-                        className="contact-form-card"
+                        className="contact-form-card glass-morphism"
                     >
                         <form onSubmit={handleSubmit} className="contact-form">
                             <div className="form-group">
-                                <label>Name</label>
+                                <label htmlFor="contact-name">Name</label>
                                 <input
+                                    id="contact-name"
+                                    suppressHydrationWarning
                                     type="text"
                                     required
                                     value={formState.name}
@@ -73,8 +82,10 @@ const Contact = () => {
                                 />
                             </div>
                             <div className="form-group">
-                                <label>Email</label>
+                                <label htmlFor="contact-email">Email</label>
                                 <input
+                                    id="contact-email"
+                                    suppressHydrationWarning
                                     type="email"
                                     required
                                     value={formState.email}
@@ -82,15 +93,17 @@ const Contact = () => {
                                 />
                             </div>
                             <div className="form-group">
-                                <label>Message</label>
+                                <label htmlFor="contact-message">Message</label>
                                 <textarea
+                                    id="contact-message"
+                                    suppressHydrationWarning
                                     required
                                     rows={4}
                                     value={formState.message}
                                     onChange={e => setFormState({ ...formState, message: e.target.value })}
                                 ></textarea>
                             </div>
-                            <button type="submit" className="btn btn-primary submit-btn">
+                            <button suppressHydrationWarning type="submit" className="btn btn-primary submit-btn" aria-label="Send your message">
                                 Send Message <Send size={18} />
                             </button>
                         </form>
