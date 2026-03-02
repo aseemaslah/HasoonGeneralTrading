@@ -9,7 +9,14 @@ const Contact = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        alert('Thank you! Your message has been sent.');
+
+        const phoneNumber = "919645207034"; // Number from the contact info
+        const text = `Name: ${formState.name}\nEmail: ${formState.email}\nMessage: ${formState.message}`;
+        const encodedText = encodeURIComponent(text);
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedText}`;
+
+        window.open(whatsappUrl, '_blank');
+
         setFormState({ name: '', email: '', message: '' });
     };
 
