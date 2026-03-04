@@ -8,6 +8,10 @@ import '../pages/Services.css';
 import '../pages/Contact.css';
 import '../pages/Testimonials.css';
 import { ClientLayoutElements } from '../components/ClientLayoutElements';
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
+
+
 
 export const metadata: Metadata = {
     metadataBase: new URL('https://hasoongeneraltrading.com'),
@@ -111,6 +115,8 @@ export default function RootLayout({
             <body suppressHydrationWarning>
                 <ClientLayoutElements />
                 {children}
+                <SpeedInsights />
+                <Analytics />
             </body>
         </html>
     );
