@@ -8,25 +8,25 @@ const testimonials = [
     {
         name: "Hansika Polymers",
         quote: "Hasoon General Trading's expertise in chemical and polymer supply has been instrumental to our manufacturing process. A truly reliable partner.",
-        role: "Strategic Partner",
+        role: "Client",
         logo: "HP"
     },
     {
         name: "Intech",
         quote: "Exceptional service and timely global delivery. Their range of high-quality building materials and general trade items is unmatched in the industry.",
-        role: "Trading Client",
+        role: "Client",
         logo: "IN"
     },
     {
         name: "VS Engineering Works",
         quote: "The safety equipment and machinery parts provided by Hasoon are of top-notch quality. Their attention to standards and logistical efficiency is remarkable.",
-        role: "Industrial Client",
+        role: "Client",
         logo: "VS"
     },
     {
         name: "TMP Group",
         quote: "A versatile trading partner with a global reach. We've sourced everything from construction materials to food products with consistent excellence.",
-        role: "Logistical Partner",
+        role: "Client",
         logo: "TG"
     }
 ];
