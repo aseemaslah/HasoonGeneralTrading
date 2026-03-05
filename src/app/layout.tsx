@@ -16,18 +16,41 @@ import { Analytics } from "@vercel/analytics/next";
 export const metadata: Metadata = {
     metadataBase: new URL('https://hasoongeneraltrading.com'),
     title: {
-        default: 'Hasoon General Trading | Premium Global Import & Export Partner Dubai',
+        default: 'Hasoon General Trading | #1 International Trading Company Dubai | India & GCC',
         template: '%s | Hasoon General Trading'
     },
-    description: 'Hasoon General Trading: Your premier partner for building materials, animal health products, safety equipment, and general goods in Dubai. Global reach since 2014.',
+    description: 'Hasoon General Trading: A premier international trading company connecting global markets with a specialized focus on India and GCC countries. Experts in building materials, animal health, and industrial goods since 2014.',
     keywords: [
+        'Hasoon General Trading',
+        'Top Trading Company Dubai',
+        'Best Import Export UAE',
         'General Trading Dubai',
-        'Building Materials Export Dubai',
+        'India UAE Trade Partner',
+        'GCC Import Export Services',
+        'International Trading India GCC',
+        'Dubai India Supply Chain',
+        'Middle East Trade Specialist',
+        'Import Export Companies UAE',
+        'International Trade Dubai 2025',
+        'Building Materials Export India',
+        'Building Materials Export GCC',
         'Animal Health Products Middle East',
         'Safety Equipment Supplier Dubai',
-        'Import Export Companies UAE',
         'Hasoon General Trading LLC',
-        'Wholesale Construction Materials'
+        'Wholesale Construction Materials',
+        'Dubai Free Zone Trading',
+        'Jebel Ali Port Trading Companies',
+        'Industrial Equipment Import Dubai',
+        'FMCG Wholesale Dubai',
+        'Global Sourcing Agents UAE',
+        'Electronics Import Export Dubai',
+        'Petroleum Products Trading UAE',
+        'شركات تجارية عامة في دبي',
+        'استيراد وتصدير دبي',
+        'India GCC Trade Corridor',
+        'Supply Chain Management Dubai',
+        'Reliable Trading Partner Dubai',
+        'Global Trade Solutions 2025'
     ],
     authors: [{ name: 'Hasoon General Trading' }],
     creator: 'Hasoon General Trading',
@@ -40,8 +63,8 @@ export const metadata: Metadata = {
         locale: 'en_US',
         url: 'https://hasoongeneraltrading.com',
         siteName: 'Hasoon General Trading',
-        title: 'Hasoon General Trading | Reliable Global Trade Solutions',
-        description: 'Connecting global markets with premium building materials, animal health solutions, and industrial equipment. Trust Dubai\'s leading trading partner.',
+        title: 'Hasoon General Trading | Global Trade Focus: India & GCC',
+        description: 'Connecting global markets with a premium focus on the India-GCC trade corridor. Trust Dubai\'s leading international trading partner for building materials and industrial solutions.',
         images: [
             {
                 url: 'https://hasoongeneraltrading.com/og-image.jpg',
@@ -53,8 +76,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Hasoon General Trading | Global Import & Export',
-        description: 'Quality building materials, animal health, and safety equipment delivery worldwide from Dubai.',
+        title: 'Hasoon General Trading | International Trade India & GCC',
+        description: 'Specialized international trade solutions between India and the GCC. Quality building materials and industrial supply delivered worldwide.',
         images: ['https://hasoongeneraltrading.com/og-image.jpg'],
     },
     robots: {
@@ -68,6 +91,10 @@ export const metadata: Metadata = {
             'max-snippet': -1,
         },
     },
+    icons: {
+        icon: '/favicon.ico?v=2',
+        apple: '/favicon.png?v=2',
+    },
 };
 
 export const viewport = {
@@ -79,20 +106,36 @@ export const viewport = {
 
 const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
+    '@type': 'Corporation',
     name: 'Hasoon General Trading',
+    alternateName: ['Hasoon Trading', 'Hasoon General Trading LLC'],
     url: 'https://hasoongeneraltrading.com',
     logo: 'https://hasoongeneraltrading.com/logo.png',
+    description: 'Leading international trading company based in Dubai,Saudi Arabia and Kerala, focused on the India-GCC trade corridor. Experts in building materials, safety equipment, and industrial supply since 2014.',
+    address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Vilayattery Building, 1, 13/334,Unnikulam, Valliyoth, Kerala 673574',
+        addressLocality: 'Kerala',
+        addressRegion: 'Kerala',
+        addressCountry: 'India'
+    },
     contactPoint: {
         '@type': 'ContactPoint',
-        telephone: '+971-XXXXXXX', // Replace with actual
+        telephone: '+91- 9645207034',
         contactType: 'customer service',
-        areaServed: 'Worldwide',
-        availableLanguage: ['en', 'Arabic']
+        areaServed: ['UAE', 'IN', 'GCC'],
+        availableLanguage: ['en', 'Arabic', 'Hindi', 'Malayalam']
     },
     sameAs: [
-        'https://www.linkedin.com/company/hasoon-general-trading',
-        // Add other social links
+        'https://www.instagram.com/hasoon_general_tradin    ',
+    ],
+    knowsAbout: [
+        'International Trade',
+        'General Trading',
+        'Global Logistics',
+        'India-GCC Trade Corridor',
+        'Building Materials Supply',
+        'Industrial Equipment'
     ]
 };
 

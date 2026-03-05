@@ -25,7 +25,7 @@ const Home = () => {
                     >
                         <span className="hero-badge">Established 2014</span>
                         <h1 className="heading-xl">
-                            Your Trusted Partner in <span className="text-gradient">Global Trade</span>
+                            <span className="text-gradient">Hasoon General Trading</span>: Your Global Trade Partner
                         </h1>
                         <p className="hero-sub">
                             Connecting markets with quality products. From building materials to animal health, we deliver excellence across borders.
