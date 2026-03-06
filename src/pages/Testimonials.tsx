@@ -7,7 +7,7 @@ import { Quote } from 'lucide-react';
 const testimonials = [
     {
         name: "Hansika Polymers",
-        quote: "Hasoon General Trading's expertise in chemical and polymer supply has been instrumental to our manufacturing process. A truly reliable partner.",
+        quote: "Hasoon General Trading's expertise in chemical and polymer supply has been instrumental to our manufacturing process. A truly reliable company.",
         role: "Client",
         logo: "HP"
     },
@@ -25,7 +25,7 @@ const testimonials = [
     },
     {
         name: "TMP Group",
-        quote: "A versatile trading partner with a global reach. We've sourced everything from construction materials to food products with consistent excellence.",
+        quote: "Hasoon General Trading is a dependable partner with a strong global sourcing network. Their dedication to quality and professionalism has greatly supported our insecticide and fertilizer business.",
         role: "Client",
         logo: "TG"
     }
