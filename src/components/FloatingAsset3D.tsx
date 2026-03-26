@@ -70,9 +70,14 @@ const Asset = ({ type, color = "#fbbf24", position = [0, 0, 0], scale = 1 }: Ass
 
 export const FloatingAsset3D = (props: AssetProps) => {
     const [mounted, setMounted] = React.useState(false);
-    React.useEffect(() => setMounted(true), []);
+    const [isMobile, setIsMobile] = React.useState(false);
 
-    if (!mounted) return null;
+    React.useEffect(() => {
+        setMounted(true);
+        setIsMobile(window.innerWidth < 768);
+    }, []);
+
+    if (!mounted || isMobile) return null;
 
     return (
         <div style={{ width: '100%', height: '100%', pointerEvents: 'none' }}>

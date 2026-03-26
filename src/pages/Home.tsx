@@ -1,12 +1,15 @@
-'use client';
-
 import React from 'react';
+import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Globe, ShieldCheck, Users } from 'lucide-react';
 import { Reveal } from '../components/Reveal';
-import HeroGlobe from '../components/HeroGlobe';
 import Image from 'next/image';
 import { Marquee } from '../components/Marquee';
+
+const HeroGlobe = dynamic(() => import('../components/HeroGlobe'), { 
+    ssr: false,
+    loading: () => <div style={{ height: '500px', background: 'radial-gradient(circle, rgba(10,35,81,0.2) 0%, transparent 70%)' }} />
+});
 
 const Home = () => {
     return (

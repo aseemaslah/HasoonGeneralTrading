@@ -10,8 +10,14 @@ import '../pages/Testimonials.css';
 import { ClientLayoutElements } from '../components/ClientLayoutElements';
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
+import { Outfit } from 'next/font/google';
 
-
+const outfit = Outfit({
+    subsets: ['latin'],
+    weight: ['300', '400', '500', '600', '700', '800'],
+    variable: '--font-outfit',
+    display: 'swap',
+});
 
 export const metadata: Metadata = {
     metadataBase: new URL('https://hasoongeneraltrading.com'),
@@ -145,11 +151,8 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en" suppressHydrationWarning>
+        <html lang="en" suppressHydrationWarning className={outfit.variable}>
             <head>
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-                <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

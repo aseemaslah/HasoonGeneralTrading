@@ -71,6 +71,18 @@ const Background3D = () => {
         }} />
     );
 
+    if (isMobile) return (
+        <div style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            zIndex: -1,
+            backgroundColor: '#f8fafc' // A nice light background
+        }} />
+    );
+
     return (
         <div style={{
             position: 'fixed',
@@ -85,31 +97,29 @@ const Background3D = () => {
             <Canvas
                 camera={{ position: [0, 0, 5], fov: 75 }}
                 gl={{
-                    antialias: !isMobile,
+                    antialias: false, // Turn off antialias for background for speed
                     powerPreference: 'high-performance',
                     stencil: false,
                     alpha: true
                 }}
-                dpr={isMobile ? [1, 1] : [1, 2]}
+                dpr={[1, 1.5]} // Limit DPR for performance
             >
                 <ambientLight intensity={0.5} />
                 <pointLight position={[10, 10, 10]} />
-                <Particles count={isMobile ? 500 : 2000} />
+                <Particles count={2000} />
 
-                {!isMobile && (
-                    <Float speed={2} rotationIntensity={1} floatIntensity={1}>
-                        <Sphere args={[1.5, 64, 64]} position={[2, -1, -2]}>
-                            <MeshDistortMaterial
-                                color="#fbbf24"
-                                speed={2}
-                                distort={0.4}
-                                radius={1}
-                                opacity={0.05}
-                                transparent
-                            />
-                        </Sphere>
-                    </Float>
-                )}
+                <Float speed={2} rotationIntensity={1} floatIntensity={1}>
+                    <Sphere args={[1.5, 32, 32]} position={[2, -1, -2]}>
+                        <MeshDistortMaterial
+                            color="#fbbf24"
+                            speed={2}
+                            distort={0.4}
+                            radius={1}
+                            opacity={0.05}
+                            transparent
+                        />
+                    </Sphere>
+                </Float>
             </Canvas>
         </div>
     );
